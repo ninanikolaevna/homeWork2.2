@@ -31,13 +31,14 @@ public class Main {
         int class3 = 30;
         int paper = 480;
         int paperEach = paper / (class1 + class2 + class3);
-        System.out.println(paperEach);
+        System.out.println("На каждого ученика рассчитано " + paperEach + " листов бумаги");
 //задача4
         int boutle = 16;
         int timeCikl = 2;
         //производительность в минуту
         int efficiencyMin = boutle / timeCikl;
-        System.out.println("За " + timeCikl + " минут машина произвела " + boutle + " штук бутылок");
+        System.out.println("За " + timeCikl + " минуты машина произвела " + boutle + " штук бутылок");
+        System.out.println("За 20 минут машина произвела " + boutle * 20 + " штук бутылок");
         //произведено в сутки
         int efficiencyDay = efficiencyMin * (24 * 60);
         System.out.println("За сутки машина произвела " + efficiencyDay + " штук бутылок");
