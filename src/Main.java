@@ -35,16 +35,17 @@ public class Main {
 //задача4
         int boutle = 16;
         int timeCikl = 2;
-        //производительность в минуту
+        //производительность в минуту 16:2=8 бут/мин
         int efficiencyMin = boutle / timeCikl;
-        System.out.println("За " + timeCikl + " минуты машина произвела " + boutle + " штук бутылок");
-        System.out.println("За 20 минут машина произвела " + boutle * 20 + " штук бутылок");
+
+        //за 20 минут
+        System.out.println("За 20 минут машина произвела " + efficiencyMin * 20 + " штук бутылок");
         //произведено в сутки
         int efficiencyDay = efficiencyMin * (24 * 60);
         System.out.println("За сутки машина произвела " + efficiencyDay + " штук бутылок");
         //за три дня
         System.out.println("За три дня машина произвела " + efficiencyDay * 3 + " штук бутылок");
-        //за месяц
+        //за месяц (30 дней)
         System.out.println("За месяц машина произвела " + efficiencyDay * 30 + " штук бутылок");
 
         int whitePerClass = 2;
@@ -81,13 +82,13 @@ int salaryK = 76230;
 double salaryMAfter = salaryM * 1.1;
         double salaryDAfter = salaryD * 1.1;
         double salaryKAfter = salaryK * 1.1;
-        double salaryYearMoreM = (salaryMAfter % salaryM) * 12;
-        double salaryYearMoreD = (salaryDAfter % salaryD) * 12;
-        double salaryYearMoreK = (salaryKAfter % salaryK) * 12;
+        double salaryYearMoreM = (salaryMAfter - salaryM) * 12;
+        double salaryYearMoreD = (salaryDAfter - salaryD) * 12;
+        double salaryYearMoreK = (salaryKAfter - salaryK) * 12;
 
         System.out.printf("Маша теперь получает %.2f рублей. " +
                 "Годовой доход вырос на %.2f рублей.\n", salaryMAfter, salaryYearMoreM);
-        System.out.println("Денис теперь получает  рублей. Годовой доход вырос на " + salaryYearMoreD + "рублей");
+        System.out.println("Денис теперь получает " + salaryDAfter + "  рублей. Годовой доход вырос на " + salaryYearMoreD + "рублей");
         System.out.println("Кристина теперь получает " + salaryKAfter
                 + " рублей. Годовой доход вырос на " + salaryYearMoreK + "рублей");
 
